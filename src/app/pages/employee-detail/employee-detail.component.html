@@ -1,0 +1,15 @@
+<div class="detail-container" *ngIf="employee">
+  <h2>Employee Details</h2>
+  <ul>
+    <li><strong>ID:</strong> {{ employee.id }}</li>
+    <li><strong>Name:</strong> {{ employee.name }}</li>
+    <li><strong>Position:</strong> {{ employee.position }}</li>
+    <li><strong>Mobile:</strong> {{ employee.mobile }}</li>
+    <li><strong>Address:</strong> {{ employee.address }}</li>
+    <li><strong>Date of Birth:</strong> {{ employee.dob }}</li>
+    <li><strong>Date of Joining:</strong> {{ employee.doj }}</li>
+    <li><strong>Married:</strong> {{ employee.married }}</li>
+  </ul>
+
+  <button routerLink="/dashboard">Back to List</button>
+</div>

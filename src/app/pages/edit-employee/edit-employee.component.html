@@ -1,0 +1,33 @@
+<div class="form-container" *ngIf="employee">
+  <h2>Edit Employee</h2>
+  <form (ngSubmit)="updateEmployee()">
+    <label>ID</label>
+    <input type="text" [(ngModel)]="employee.id" name="id" readonly />
+
+    <label>Name</label>
+    <input type="text" [(ngModel)]="employee.name" name="name" required />
+
+    <label>Position</label>
+    <input type="text" [(ngModel)]="employee.position" name="position" required />
+
+    <label>Mobile</label>
+    <input type="text" [(ngModel)]="employee.mobile" name="mobile" required />
+
+    <label>Address</label>
+    <input type="text" [(ngModel)]="employee.address" name="address" required />
+
+    <label>Date of Birth</label>
+    <input type="date" [(ngModel)]="employee.dob" name="dob" required />
+
+    <label>Date of Joining</label>
+    <input type="date" [(ngModel)]="employee.doj" name="doj" required />
+
+    <label>Married</label>
+    <select [(ngModel)]="employee.married" name="married" required>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+
+    <button type="submit">Update</button>
+  </form>
+</div>
