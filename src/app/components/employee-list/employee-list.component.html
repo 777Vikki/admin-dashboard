@@ -1,1 +1,26 @@
-<p>employee-list works!</p>
+<div class="employee-header">
+  <h2>Employee List</h2>
+  <a routerLink="/add-employee">+ Add New Employee</a>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>{{ emp.id }}</td>
+      <td>{{ emp.name }}</td>
+      <td>{{ emp.position }}</td>
+      <td>
+        <button class="action-btn show" (click)="showDetails(emp)">Show</button>
+        <button class="action-btn edit" (click)="editEmployee(emp)">Edit</button>
+        <button class="action-btn delete" (click)="deleteEmployee(emp.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
