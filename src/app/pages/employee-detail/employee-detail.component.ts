@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { EmployeeService } from '../../services/employee.service';
 import { IEmployee } from '../../models/employee.model';
@@ -10,7 +10,7 @@ import { NgIf } from '@angular/common';
   templateUrl: './employee-detail.component.html',
   styleUrl: './employee-detail.component.scss'
 })
-export class EmployeeDetailComponent {
+export class EmployeeDetailComponent implements OnInit {
   employee?: IEmployee;
 
   constructor(private router: Router, private route: ActivatedRoute, private empService: EmployeeService) { }
