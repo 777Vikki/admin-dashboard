@@ -1,3 +1,19 @@
+
+1. Create App and Enable Standalone Components
+
+ng new admin-dashboard --standalone --routing --style=scss
+cd admin-dashboard
+
+2. Generate Pages and Services
+
+ng generate component pages/sign-in --standalone
+ng generate component pages/sign-up --standalone
+ng generate component pages/dashboard --standalone
+ng generate component components/employee-list --standalone
+ng generate service services/auth
+ng generate service services/employee
+
+
 # AdminDashboard
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
